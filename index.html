@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Retrotech — Engenharia Elétrica & Automação Industrial</title>
+  <meta name="description"
+    content="Soluções em engenharia elétrica, painéis e automação industrial. Projetos, retrofit e manutenção." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Ir para o conteúdo</a>
+
+  <!-- HEADER -->
+  <header class="site-header header--brand" role="banner">
+    <div class="container header-inner header--clean">
+      <a href="#" class="logo" aria-label="Retrotech - voltar ao início">
+        <!-- use a versão clara/white da sua logo aqui -->
+        <img src="assets/logo-retrotech-header.png" alt="Retrotech logo" />
+      </a>
+
+      <nav class="main-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <!-- se quiser depois: <li><a href="#sobre">Sobre</a></li> -->
+        </ul>
+      </nav>
+
+      <div class="header-ctas" aria-hidden="false">
+        <a href="#contato" class="contact-cta">Contato</a>
+
+        <!-- Social / Contact -->
+        <a class="social-link social-whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <!-- SVG WhatsApp: círculo verde com símbolo branco (nítido e simples) -->
+          <svg viewBox="0 0 24 24" width="26" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+            <!-- green circle background -->
+            <circle cx="12" cy="12" r="11" fill="#25D366"/>
+            <!-- phone glyph (clean path) -->
+            <path fill="#FFFFFF" d="M17.293 14.7c-.297-.15-1.757-.867-2.03-.966-.274-.1-.472-.148-.672.149-.199.297-.771.965-.945 1.164-.173.198-.347.223-.644.074-1.758-.869-3.02-1.537-4.317-3.109-.322-.388-.01-.606.224-.801.228-.19.51-.497.764-.744.254-.247.338-.423.508-.695.17-.272.082-.512-.04-.711-.122-.2-.656-1.58-.9-2.16-.244-.587-.493-.508-.672-.518l-.575-.01c-.2 0-.51.073-.777.347-.266.274-1.01 1.037-1.01 2.522 0 1.487 1.034 2.924 1.18 3.128.146.203 2.034 3.11 4.923 4.36 2.889 1.25 2.889.858 3.418.82.529-.036 1.726-.664 1.975-1.468.248-.803.248-1.49.175-1.635-.073-.144-.268-.235-.565-.384z"/>
+          </svg>
+        </a>
+
+
+
+        <a class="social-link social-instagram" href="https://instagram.com/seu_profile" target="_blank" rel="noopener"
+          aria-label="Instagram">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5" stroke="#fff" stroke-width="1.6" fill="none" />
+              <circle cx="12" cy="12" r="3.2" stroke="#fff" stroke-width="1.6" fill="none" />
+              <circle cx="17.5" cy="6.5" r="0.6" fill="#fff" />
+            </svg>
+          <!-- <img src="assets/instagram-icon.png" alt="Instagram" width="18" height="18" aria-hidden="true" /> -->
+        </a>
+
+        <!-- mobile hamburger -->
+        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+
+  <main id="main" role="main">
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Soluções em Engenharia Elétrica e Automação Industrial</h1>
+          <p class="lead">Projetos, painéis, retrofit e integração de sistemas para aumentar eficiência e reduzir
+            paradas operacionais.</p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Solicitar
+              Orçamento</a>
+            <a class="btn btn-ghost" href="https://wa.me/5511999999999" id="whatsapp-cta" target="_blank"
+              rel="noopener">Fale pelo WhatsApp</a>
+          </div>
+
+          <!-- <ul class="hero-highlights" aria-hidden="true">
+            <li>Conformidade NR10 / NR12</li>
+            <li>Suporte técnico 24/7</li>
+          </ul> -->
+        </div>
+
+        <div class="hero-media" role="img" aria-label="Imagem de painel elétrico / automação">
+          <!-- substitua assets/hero.jpg por hero que você quiser -->
+          <img src="assets/hero.png" alt="Profissionais trabalhando em painel elétrico" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Slider de Serviços ===== -->
+    <section id="servicos" class="section section-light container" aria-labelledby="servicos-title">
+      <h2 id="servicos-title" class="section-title">Nossos Serviços</h2>
+
+      <div class="service-slider" id="serviceSlider" aria-roledescription="carousel">
+        <div class="slider-track" role="list">
+
+          <!-- Slide 1 -->
+          <article class="slide" role="group" aria-roledescription="slide"
+            aria-label="1 de 7 - Montagem de painéis elétricos">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <!-- Tabler: layout-grid -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
+                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="7" height="7" rx="1" />
+                    <rect x="14" y="3" width="7" height="7" rx="1" />
+                    <rect x="3" y="14" width="7" height="7" rx="1" />
+                    <rect x="14" y="14" width="7" height="7" rx="1" />
+                  </svg>
+                </div>
+
+                <h3>Montagem de painéis elétricos</h3>
+                <p class="service-desc">Montamos painéis conforme normas regulamentadoras, testes e certificação para
+                  operação segura.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/painel-eletrico.png" alt="Montagem de painéis elétricos — foto" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 2 -->
+          <article class="slide" role="group" aria-roledescription="slide"
+            aria-label="2 de 7 - Projetos elétricos / automação industrial">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <!-- Tabler: blueprint -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
+                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 7l9 -4l9 4l-9 4l-9 -4v10l9 4l9 -4v-10" />
+                    <path d="M3 7l9 4l9 -4" />
+                  </svg>
+                </div>
+
+                <h3>Projetos elétricos / automação industrial</h3>
+                <p class="service-desc">Projetos, diagramas unifilares, estudos de carga e integração de automação para
+                  plantas industriais.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/service-project.png" alt="Projetos elétricos e automação — foto" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 3 -->
+          <article class="slide" role="group" aria-roledescription="slide"
+            aria-label="3 de 7 - Retrofitting de máquinas e equipamentos">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <!-- Tabler: rotate-clockwise -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
+                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3" />
+                    <path d="M21 12a9 9 0 1 0-3.6 7.2" />
+                    <path d="M21 3v6h-6" />
+                  </svg>
+                </div>
+
+                <h3>Retrofitting de máquinas e equipamentos</h3>
+                <p class="service-desc">Modernização de máquinas para aumentar produtividade e reduzir paradas, com
+                  integração de CLP e IHM.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/service-retrofit.png" alt="Retrofitting — foto" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 4 -->
+          <article class="slide" role="group" aria-roledescription="slide"
+            aria-label="4 de 7 - Correção de fator de potência">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <!-- Tabler: bolt -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
+                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M13 2L3 14h9l-1 8l10 -12h-9z" />
+                  </svg>
+                </div>
+
+                <h3>Correção de fator de potência</h3>
+                <p class="service-desc">Análise e implementação de bancos de capacitores e soluções para otimizar o
+                  consumo energético.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/capacitor-bank.png" alt="Correção de fator de potência — foto" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 5 -->
+          <article class="slide" role="group" aria-roledescription="slide"
+            aria-label="5 de 7 - Programação de CLP e IHM">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <!-- Tabler: cpu -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
+                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" />
+                    <path d="M9 9h6v6H9z" />
+                  </svg>
+                </div>
+
+                <h3>Programação de CLP e IHM</h3>
+                <p class="service-desc">Desenvolvimento e comissionamento de lógicas em CLP, telas IHM e integração com
+                  SCADA.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/service-plc.png" alt="Programação CLP e IHM — foto" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 6 -->
+          <article class="slide" role="group" aria-roledescription="slide" aria-label="6 de 7 - Análise de energia">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <!-- Tabler: chart-line -->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
+                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 17l6 -6l4 4l8 -8" />
+                    <path d="M14 7h7v7" />
+                  </svg>
+                </div>
+
+                <h3>Análise de energia</h3>
+                <p class="service-desc">Medições, auditorias energéticas e recomendações para reduzir consumo e custos
+                  operacionais.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/service-energy.png" alt="Análise de energia — foto" />
+              </div>
+            </div>
+          </article>
+
+          <!-- Slide 7 -->
+          <article class="slide" role="group" aria-roledescription="slide"
+            aria-label="7 de 7 - Manutenções corretivas e preventivas">
+            <div class="slide-inner">
+              <div class="slide-left">
+                <div class="service-icon">
+                  <img src="assets/service-maintenance-icon.png" alt="ícone ferramentas" width="48" height="48" />
+                </div>
+
+                <h3>Manutenções corretivas e preventivas</h3>
+                <p class="service-desc">Planos de manutenção preventiva e atendimento corretivo com equipe técnica
+                  especializada.</p>
+              </div>
+
+              <div class="slide-right">
+                <img src="assets/service-maintenance.png" alt="Manutenção corretiva e preventiva — foto" />
+              </div>
+            </div>
+          </article>
+
+
+        </div>
+
+        <!-- indicators -->
+        <div class="slider-dots" role="tablist" aria-label="Navegação dos slides">
+          <button class="dot" data-index="0" aria-label="Ir para slide 1" role="tab"></button>
+          <button class="dot" data-index="1" aria-label="Ir para slide 2" role="tab"></button>
+          <button class="dot" data-index="2" aria-label="Ir para slide 3" role="tab"></button>
+          <button class="dot" data-index="3" aria-label="Ir para slide 4" role="tab"></button>
+          <button class="dot" data-index="4" aria-label="Ir para slide 5" role="tab"></button>
+          <button class="dot" data-index="5" aria-label="Ir para slide 6" role="tab"></button>
+          <button class="dot" data-index="6" aria-label="Ir para slide 7" role="tab"></button>
+        </div>
+
+        <!-- progress bar (visual) -->
+        <div class="slider-progress" aria-hidden="true">
+          <div class="slider-progress__bar"></div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <!-- FOOTER  -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+
+      <!-- LOGO + TEXTO -->
+      <div class="footer-left">
+        <img src="assets/logo-retrotech-footer.png" alt="Logo Retrotech" class="footer-logo" />
+
+        <div class="footer-text">
+          Retrotech — Engenharia Elétrica e Automação Industrial
+        </div>
+      </div>
+
+      <!-- BOTÕES -->
+      <div class="footer-actions">
+        <a class="footer-btn" href="https://wa.me/5511999999999" target="_blank">
+          <img src="assets/whatsapp-icon.png" alt="WhatsApp">
+          WhatsApp
+        </a>
+
+        <a class="footer-btn" href="https://instagram.com/seu_profile" target="_blank">
+          <img src="assets/instagram-icon.png" alt="Instagram">
+          Instagram
+        </a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      © <span id="year"></span> Retrotech. Todos os direitos reservados.
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
