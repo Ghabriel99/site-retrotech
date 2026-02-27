@@ -15,13 +15,10 @@
 </head>
 
 <body>
-  <a class="skip-link" href="#main">Ir para o conteúdo</a>
-
   <!-- HEADER -->
   <header class="site-header header--brand" role="banner">
     <div class="container header-inner header--clean">
       <a href="#" class="logo" aria-label="Retrotech - voltar ao início">
-        <!-- use a versão clara/white da sua logo aqui -->
         <img src="assets/logo-retrotech-header.png" alt="Retrotech logo" />
       </a>
 
@@ -35,33 +32,6 @@
       <div class="header-ctas" aria-hidden="false">
         <a href="#contato" class="contact-cta">Contato</a>
 
-        <!-- Social / Contact -->
-        <a class="social-link social-whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="WhatsApp">
-          <!-- SVG WhatsApp: círculo verde com símbolo branco (nítido e simples) -->
-          <svg viewBox="0 0 24 24" width="26" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-            <!-- green circle background -->
-            <circle cx="12" cy="12" r="11" fill="#25D366"/>
-            <!-- phone glyph (clean path) -->
-            <path fill="#FFFFFF" d="M17.293 14.7c-.297-.15-1.757-.867-2.03-.966-.274-.1-.472-.148-.672.149-.199.297-.771.965-.945 1.164-.173.198-.347.223-.644.074-1.758-.869-3.02-1.537-4.317-3.109-.322-.388-.01-.606.224-.801.228-.19.51-.497.764-.744.254-.247.338-.423.508-.695.17-.272.082-.512-.04-.711-.122-.2-.656-1.58-.9-2.16-.244-.587-.493-.508-.672-.518l-.575-.01c-.2 0-.51.073-.777.347-.266.274-1.01 1.037-1.01 2.522 0 1.487 1.034 2.924 1.18 3.128.146.203 2.034 3.11 4.923 4.36 2.889 1.25 2.889.858 3.418.82.529-.036 1.726-.664 1.975-1.468.248-.803.248-1.49.175-1.635-.073-.144-.268-.235-.565-.384z"/>
-          </svg>
-        </a>
-
-
-
-        <a class="social-link social-instagram" href="https://instagram.com/seu_profile" target="_blank" rel="noopener"
-          aria-label="Instagram">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
-              <rect x="3" y="3" width="18" height="18" rx="5" ry="5" stroke="#fff" stroke-width="1.6" fill="none" />
-              <circle cx="12" cy="12" r="3.2" stroke="#fff" stroke-width="1.6" fill="none" />
-              <circle cx="17.5" cy="6.5" r="0.6" fill="#fff" />
-            </svg>
-          <!-- <img src="assets/instagram-icon.png" alt="Instagram" width="18" height="18" aria-hidden="true" /> -->
-        </a>
-
-        <!-- mobile hamburger -->
-        <button class="hamburger" aria-label="Abrir menu" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
       </div>
     </div>
   </header>
@@ -74,31 +44,51 @@
       <div class="container hero-grid">
         <div class="hero-content">
           <h1>Soluções em Engenharia Elétrica e Automação Industrial</h1>
-          <p class="lead">Projetos, painéis, retrofit e integração de sistemas para aumentar eficiência e reduzir
-            paradas operacionais.</p>
-
-          <div class="hero-ctas">
-            <a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Solicitar
-              Orçamento</a>
-            <a class="btn btn-ghost" href="https://wa.me/5511999999999" id="whatsapp-cta" target="_blank"
-              rel="noopener">Fale pelo WhatsApp</a>
+          <p class="lead">
+            Elaboração de projetos elétricos, Montagem de painéis, Retrofitting de máquinas, Correção de fator de potência, Indústria 4.0.
+          </p>
+          <div class="hero-actions">
+            <a class="btn-primary" href="https://wa.me/5543996055993" target="_blank">
+              Falar com Comercial
+            </a>
+            <a class="btn-outline" href="https://wa.me/5543996055993" target="_blank">
+              Falar com Engenharia
+            </a>
           </div>
-
-          <!-- <ul class="hero-highlights" aria-hidden="true">
-            <li>Conformidade NR10 / NR12</li>
-            <li>Suporte técnico 24/7</li>
-          </ul> -->
         </div>
-
         <div class="hero-media" role="img" aria-label="Imagem de painel elétrico / automação">
-          <!-- substitua assets/hero.jpg por hero que você quiser -->
           <img src="assets/hero.png" alt="Profissionais trabalhando em painel elétrico" />
         </div>
       </div>
     </section>
 
+    <!-- DIFERENCIAIS -->
+    <section class="diferenciais">
+      <div class="container diferenciais-grid">
+    
+        <div class="diferencial-item">
+          <div class="dif-icon">⚙️</div>
+          <h3>Atendimento técnico especializado</h3>
+          <p>Equipe qualificada para atender demandas industriais com segurança e eficiência.</p>
+        </div>
+    
+        <div class="diferencial-item">
+          <div class="dif-icon">📊</div>
+          <h3>Soluções sob medida</h3>
+          <p>Projetos personalizados conforme a necessidade de cada operação.</p>
+        </div>
+    
+        <div class="diferencial-item">
+          <div class="dif-icon">⚡</div>
+          <h3>Redução de custos operacionais</h3>
+          <p>Analise de energia com foco em otimização energética.</p>
+        </div>
+    
+      </div>
+    </section>
+
     <!-- ===== Slider de Serviços ===== -->
-    <section id="servicos" class="section section-light container" aria-labelledby="servicos-title">
+    <section id="servicos" class="section section-light" aria-labelledby="servicos-title">
       <h2 id="servicos-title" class="section-title">Nossos Serviços</h2>
 
       <div class="service-slider" id="serviceSlider" aria-roledescription="carousel">
@@ -133,7 +123,7 @@
 
           <!-- Slide 2 -->
           <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="2 de 7 - Projetos elétricos / automação industrial">
+            aria-label="2 de 7 - Projetos elétricos e de automação industrial">
             <div class="slide-inner">
               <div class="slide-left">
                 <div class="service-icon">
@@ -302,7 +292,7 @@
   </main>
 
   <!-- FOOTER  -->
-  <footer class="site-footer" role="contentinfo">
+  <footer id="contato" class="site-footer" role="contentinfo">
     <div class="container footer-grid">
 
       <!-- LOGO + TEXTO -->
@@ -310,7 +300,7 @@
         <img src="assets/logo-retrotech-footer.png" alt="Logo Retrotech" class="footer-logo" />
 
         <div class="footer-text">
-          Retrotech — Engenharia Elétrica e Automação Industrial
+          Retrotech Automação Industrial
         </div>
       </div>
 
