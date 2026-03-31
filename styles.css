@@ -1,19 +1,16 @@
 /* =========================================================
-   RETROTECH - CSS FINAL CORRIGIDO DEFINITIVO
+   RETROTECH - CSS FINAL
    ========================================================= */
 
 :root {
   --blue-600: #2F6F8F;
   --blue-700: #1E4F66;
-  /* --blue-600: #0A74A8;
-  --blue-700: #055A86; */
   --black: #0B0B0B;
   --container-gap: 24px;
   --max-width: 1200px;
   --shadow-lg: 0 18px 40px rgba(3, 12, 28, 0.18);
 }
 
-/* RESET */
 
 * {
   box-sizing: border-box;
@@ -47,11 +44,6 @@ img {
 /* =========================================================
    HEADER
    ========================================================= */
-
-/* =========================================================
-   HEADER CORRIGIDO DE VERDADE
-   ========================================================= */
-
 .site-header {
   position: sticky;
   top: 0;
@@ -59,65 +51,86 @@ img {
 }
 
 .header--brand {
-  background: #ffffff;
-  border-bottom: 1px solid rgba(0,0,0,.06);
-  backdrop-filter: blur(6px);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, .08);
+  background: #f1f5f9;
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.06);
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 80px;
-  gap: 40px; /* espaço entre blocos */
+  height: 70px;
+  gap: 40px;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  margin-right: 40px; /* separa da nav */
+  margin-right: 40px;
 }
 
 .logo img{
-  height:105px;
+  height: 105px;
   filter:drop-shadow(0 2px 6px rgba(0,0,0,.15));
 }
 
+/* ======NAV====== */
+.main-nav {
+  flex: 1;
+  display: flex;
+}
 
 .main-nav ul {
   display: flex;
-  gap: 28px;
+  width: 100%;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
+
+}
+
+.main-nav ul li:first-child {
+  margin: 0 auto;
+}
+
+.main-nav ul li:last-child {
+  margin-left: auto;
 }
 
 .main-nav a {
-  color: var(--blue-700);
+  color: #1E4F66;
   text-decoration: none;
   font-weight: 600;
   font-size: .95rem;
   letter-spacing: 0.3px;
-  opacity: .9;
+  opacity: 1;
   transition: .2s;
+  position: relative;
+}
+
+.main-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: .3s;
+}
+
+.main-nav a:hover::after {
+  width: 100%;
 }
 
 .main-nav a:hover {
   opacity: 1;
+  color: #38bdf8;
 }
 
-.main-nav a:hover,
-.contact-cta:hover {
-  color: var(--blue-600);
-}
-
-/* DIREITA */
-.header-ctas {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
 
 .contact-cta {
   color: var(--blue-700);
@@ -148,15 +161,16 @@ img {
   align-items: center;
   padding: 80px 0;
   padding-bottom: 40px;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(10,116,168,0.05), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(5,90,134,0.05), transparent 40%),
+    background:
+    url('assets/bg-tech.png') no-repeat left center,
     #f9fbfd;
+
+  background-size: 600px; /* controla o tamanho */
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 520px;
+  grid-template-columns: 1fr 600px;
   gap: 40px;
   align-items: center;
 }
@@ -177,11 +191,15 @@ img {
   margin-bottom: 20px;
 }
 
+.hero-media {
+  transform: scale(1.08);
+}
+
 .hero-media img {
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow:
-    0 20px 50px rgba(0,0,0,.12),
-    0 5px 15px rgba(0,0,0,.05);
+    0 30px 80px rgba(0,0,0,0.18),
+    0 10px 25px rgba(0,0,0,0.08);
   transition: transform .4s ease;
 }
 
@@ -191,17 +209,17 @@ img {
 
 .hero-actions {
   display: flex;
-  gap: 16px;
+  gap: 10px;
   margin-top: 28px;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, #2F6F8F, #1E4F66);
   color: #fff;
-  padding: 16px 30px;
+  padding: 11px 20px;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1rem;
   letter-spacing: .3px;
   box-shadow: 0 12px 28px rgba(30,79,102,.28);
@@ -223,7 +241,7 @@ img {
   border: 2px solid var(--blue-600);
   color: var(--blue-700);
   background: transparent;
-  padding: 16px 28px;
+  padding: 9px 16px;
   border-radius: 12px;
   font-weight: 600;
   font-size: .95rem;
@@ -286,7 +304,6 @@ img {
     grid-template-columns:1fr;
   }
 }
-
 
 
 /* =========================================================
@@ -422,63 +439,94 @@ img {
    FOOTER
    ========================================================= */
 .site-footer {
-  background: #f4f6f8;
-  border-top: 2px solid var(--blue-600);
-  padding: 70px 0 40px;
+  background: linear-gradient(135deg, #1E4F66, #2F6F8F);
+  border-top: none;
+  padding: 30px 0 25px;
   margin-top: 120px;
   text-align: center;
+  color: #fff;
 }
 
 .footer-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 30px;
+  gap: 4px;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.footer-bottom {
+  margin-top: 25px;
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.6);
+  opacity: 0.7;
 }
 
 .footer-logo {
-  height: 120px;
-  display: block;
-  margin: 0 auto;
+  height: 102px;
+  filter: brightness(0) invert(1);
 }
 
 .footer-text {
-  font-size: .9rem;
-  color: #555;
-  max-width: 500px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+  color: #e0f2fe;
+  margin-top: -18px;
+}
+
+.footer-info {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0px;
 }
 
 .footer-actions {
+  margin-top: 6px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   justify-content: center;
 }
 
 .footer-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
   display: flex;
   align-items: center;
-  font-size: 1rem;
-  gap: 10px;
-  font-weight: 600;
-  text-decoration: none;
-  color: #1f2d3d;
+  justify-content: center;
+  transition: all .25s ease;
+}
+
+.footer-btn svg {
+  width: 18px;
+  height: 18px;
+  color: #38bdf8;
   transition: .2s;
 }
 
+.footer-btn:hover svg {
+  color: #1E4F66;
+}
+
 .footer-btn img {
-  width: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .footer-btn:hover {
-  color: var(--blue-600);
-    transform: translateY(-2px);
+  background: #ffffff;
+  transform: translateY(-3px) scale(1.05);
 }
 
-.footer-bottom {
-  margin-top: 40px;
-  font-size: .8rem;
-  color: #777;
-}
 
 /* =========================================================
    RESPONSIVIDADES

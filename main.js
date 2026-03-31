@@ -113,22 +113,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     slider.addEventListener("pointermove", e => {
       if (!isDragging) return;
-      const dx = e.clientX - startX;
+      currentX = e.clientX;
+
+      const dx = currentX - startX;
       const slideWidth = slider.clientWidth;
       const baseOffset = -index * slideWidth;
       track.style.transform = `translateX(${baseOffset + dx}px)`;
     });
 
-    function endSwipe(e) {
+    function endSwipe() {
       if (!isDragging) return;
       isDragging = false;
 
-      const dx = e.clientX - startX;
+      const dx = currentX - startX;
       const threshold = slider.clientWidth * 0.18;
 
       if (dx > threshold) prev();
       else if (dx < -threshold) next();
-      else goTo(index); // snap back
+      else goTo(index);
 
       startAutoplay();
     }
