@@ -168,12 +168,12 @@ img {
 
 .hero-content h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(22px, 5vw, 38px);
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.5px;
-  margin-bottom: 18px;
-  max-width: 640px;
+  font-size: clamp(22px, 4.5vw, 34px);
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.3px;
+  margin-bottom: 16px;
+  max-width: 600px;
 }
 
 .lead {
@@ -199,7 +199,7 @@ img {
 }
 
 .hero-media img:hover {
-  transform: translateY(-6px);
+  transform: scale(1.03);
 }
 
 .hero-actions {
@@ -209,21 +209,34 @@ img {
   
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp .8s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .btn-primary {
   background: linear-gradient(135deg, #2F6F8F, #1E4F66);
   color: #fff;
-  padding: 11px 20px;
+  padding: 10px 18px;
   border-radius: 12px;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: .3px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
   box-shadow: 0 12px 28px rgba(30,79,102,.28);
   transition: all .25s ease;
 }
 
 .btn-primary:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 16px 34px rgba(30,79,102,.35);
 }
 
@@ -294,22 +307,17 @@ img {
   line-height:1.5;
 }
 
-/* Responsivo */
-@media(max-width:900px){
-  .diferenciais-grid{
-    grid-template-columns:1fr;
-  }
-}
-
 
 /* =========================================================
    SERVIÇOS
    ========================================================= */
 
 #servicos {
-  padding: 80px 0 160px;
+  padding: 80px 0 120px;
   background:#f5f8fb;
-  border-top:1px solid rgba(0,0,0,.04);}
+  border-top:1px solid rgba(0,0,0,.04);
+  min-height: 100vh;
+}
 
 .section-title {
   font-family: 'Montserrat';
@@ -323,7 +331,6 @@ img {
 }
 
 /* SLIDER */
-
 .service-icon svg {
   width: 36px;
   height: 36px;
@@ -332,11 +339,14 @@ img {
 .service-slider {
   overflow: hidden;
   position: relative;
+  margin-bottom: 80px;
+  touch-action: pan-y;
 }
 
 .slider-track {
   display: flex;
-  transition: transform .6s cubic-bezier(.22, .9, .35, 1);
+  transition: transform .5s ease;
+  will-change: transform;
 }
 
 .slide {
@@ -344,6 +354,7 @@ img {
   flex: 0 0 100%;
   display: flex;
   justify-content: center;
+  flex-shrink: 0;
 }
 
 .slide-inner {
@@ -432,25 +443,68 @@ img {
 }
 
 /* =========================================================
+   whatsapp float
+   ========================================================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  transition: transform .2s ease;
+}
+
+.whatsapp-float img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+}
+
+@keyframes whatsappPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-float {
+  animation: whatsappPulse 3s infinite;
+}
+
+
+/* =========================================================
    FOOTER
    ========================================================= */
 .site-footer {
   background: linear-gradient(135deg, #1E4F66, #2F6F8F);
-  border-top: none;
-  padding: 50px 0 30px;
-  margin-top: 120px;
+  padding: 20px 0 18px; /* 🔥 antes 40 → reduz */
+  margin-top: 80px;
   text-align: center;
   color: #fff;
   position: relative;
   overflow: hidden;
-  gap: 8px;
 }
 
 .footer-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 4px;
 }
 
 .footer-left {
@@ -470,13 +524,14 @@ img {
 .footer-logo {
   height: 102px;
   filter: brightness(0) invert(1);
+  margin-bottom: 0; /* 🔥 remove gambiarra */
 }
 
 .footer-text {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   font-weight: 600;
-  margin-top: -10px;
+  margin-top: -20px;
   letter-spacing: 0.3px;
   color: #e0f2fe;
 }
@@ -484,8 +539,8 @@ img {
 .footer-info {
   font-size: 0.85rem;
   color: rgba(255,255,255,0.6);
-  margin-top: 4px;
-  line-height: 1.4;
+  margin-top: 2px;
+  line-height: 1.3;
 }
 
 .footer-info + .footer-info {
@@ -493,9 +548,9 @@ img {
 }
 
 .footer-actions {
-  margin-top: 6px;
+  margin-top: 8px;
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
 }
 
@@ -556,7 +611,21 @@ img {
     text-align: center;
   }
   .footer-grid {
-    gap: 12px;
+    gap: 8px;
+  }
+  .footer-text {
+    font-size: 0.9rem;
+  }
+  .footer-info {
+    font-size: 0.8rem;
+  }
+  .whatsapp-float {
+    width: 46px;
+    height: 46px;
+  }
+  .whatsapp-float img {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -574,6 +643,23 @@ img {
   .btn-outline {
     padding: 12px 14px;
     font-size: 0.9rem;
+  }
+  .diferenciais-grid{
+    grid-template-columns:1fr;
+  }
+  .footer-text {
+    font-size: 0.88rem;
+  }
+  .footer-info {
+    font-size: 0.78rem;
+  }
+  .whatsapp-float {
+    width: 46px;
+    height: 46px;
+  }
+  .whatsapp-float img {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -594,14 +680,10 @@ img {
   .logo img {
     height: 44px;
   }
-
   /* HERO */
   .hero {
     min-height: auto;
     padding: 50px 0 30px;
-  }
-  .hero-content {
-    margin: 0 auto;
   }
   .hero-content h1 {
     font-size: 24px;
@@ -616,7 +698,6 @@ img {
     gap: 12px;
     align-items: stretch;
   }
-
   /* BOTÕES */
   .btn-primary,
   .btn-outline {
@@ -624,16 +705,22 @@ img {
     font-size: 0.9rem;
   }
 
-  /* SERVIÇOS */
   #servicos {
     padding: 40px 0 60px;
   }
   .section-title {
-    font-size: 22px;
-    margin-bottom: 25px;
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+  .slide-left {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .slide-left h3 {
-    font-size: 20px;
+    text-align: center;
+    font-size: 24px;
   }
   .slide-left .service-desc {
     font-size: 0.95rem;
@@ -642,42 +729,42 @@ img {
     width: 28px;
     height: 28px;
   }
-  /* FOOTER */
   .site-footer {
-    padding: 28px 0 18px;
-    margin-top: 60px;
-  }
-  .footer-grid {
-    gap: 8px;
+    padding: 22px 0 16px;
   }
   .footer-logo {
-    height: 70px;
+    height: 60px;
   }
   .footer-text {
-    font-size: 0.9rem;
-    margin-top: -6px;
-  }
-  .footer-info {
-    font-size: 0.75rem;
-    line-height: 1.3;
-    margin-top: 4px;
-  }
-  .footer-info + .footer-info {
+    font-size: 0.85rem;
     margin-top: 2px;
   }
+  .footer-info {
+    font-size: 0.72rem;
+  }
   .footer-actions {
-    gap: 12px;
-    margin-top: 10px;
+    gap: 10px;
+    margin-top: 8px;
   }
   .footer-btn {
-    width: 34px;
-    height: 34px;
+    width: 32px;
+    height: 32px;
   }
   .footer-bottom {
-    margin-top: 14px;
-    font-size: 0.7rem;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.3px;
+    font-size: 0.65rem;
+    margin-top: 10px;
+  }
+
+  .whatsapp-float {
+    width: 42px;
+    height: 42px;
+    bottom: 14px;
+    right: 14px;
+  }
+
+  .whatsapp-float img {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -700,6 +787,24 @@ img {
   .main-nav a {
     font-size: 0.75rem;
   }
+  .footer-text {
+    font-size: 0.8rem;
+  }
+  .footer-info {
+    font-size: 0.7rem;
+  }
+
+  .whatsapp-float {
+    width: 38px;
+    height: 38px;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  .whatsapp-float img {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 
@@ -708,7 +813,6 @@ img {
 
   .hero-content h1 {
     font-size: 20px;
-    line-height: 1.2;
   }
   .lead {
     font-size: 0.85rem;
@@ -721,7 +825,6 @@ img {
   }
   .slide-right img {
     height: 200px;
-    border-radius: 14px;
   }
   .slide-left h3 {
     font-size: 17px;
@@ -732,5 +835,19 @@ img {
   .service-icon svg {
     width: 22px;
     height: 22px;
+  }
+  .footer-text {
+    font-size: 0.78rem;
+  }
+  .footer-info {
+    font-size: 0.68rem;
+  }
+  .whatsapp-float {
+    width: 34px;
+    height: 34px;
+  }
+  .whatsapp-float img {
+    width: 14px;
+    height: 14px;
   }
 }
