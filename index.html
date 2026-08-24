@@ -4,332 +4,535 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Retrotech — Engenharia Elétrica & Automação Industrial</title>
+  <title>Retrotech — Engenharia Elétrica &amp; Automação Industrial | Londrina-PR</title>
   <meta name="description"
-    content="Soluções em engenharia elétrica, painéis e automação industrial. Projetos, retrofit e manutenção." />
+    content="Projetos elétricos, montagem de painéis, retrofitting de máquinas, programação de CLP/IHM, correção de fator de potência e manutenção industrial em Londrina e região." />
+  <meta name="theme-color" content="#1E4F66" />
+  <link rel="icon" href="assets/logo-retrotech-header.png" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Retrotech — Engenharia Elétrica &amp; Automação Industrial" />
+  <meta property="og:description"
+    content="Projetos elétricos, painéis, retrofitting, CLP/IHM e manutenção industrial em Londrina e região." />
+  <meta property="og:image" content="assets/hero.png" />
+  <meta property="og:locale" content="pt_BR" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <!-- HEADER -->
-  <header class="site-header header--brand" role="banner">
-    <div class="container header-inner header--clean">
-      <a href="#" class="logo" aria-label="Retrotech - voltar ao início">
-        <img src="assets/logo-retrotech-header.png" alt="Retrotech logo" />
+  <a class="skip-link" href="#main">Pular para o conteúdo</a>
+
+  <!-- ============ TOPBAR ============ -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span class="topbar-item">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z" />
+          <circle cx="12" cy="10" r="2.6" />
+        </svg>
+        Londrina — PR e região
+      </span>
+      <a class="topbar-item topbar-link" href="https://wa.me/5543999852335" target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 4h3l2 5-2.2 1.3a12 12 0 0 0 5.9 5.9L15 14l5 2v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4z" />
+        </svg>
+        (43) 99985-2335
+      </a>
+    </div>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="siteHeader" role="banner">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Retrotech — voltar ao início">
+        <img src="assets/logo-retrotech-header.png" alt="Retrotech Automação Industrial" />
       </a>
 
-      <nav class="main-nav" aria-label="Navegação principal">
+      <button class="hamburger" type="button" aria-expanded="false" aria-controls="mainNav"
+        aria-label="Abrir menu de navegação">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Navegação principal">
         <ul>
           <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Como trabalhamos</a></li>
+          <li><a href="#diferenciais">Por que a Retrotech</a></li>
           <li><a href="#contato">Contato</a></li>
-          <!-- se quiser depois: <li><a href="#sobre">Sobre</a></li> -->
         </ul>
+        <a class="btn btn--sm btn--primary nav-cta"
+          href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20solicitar%20um%20orçamento."
+          target="_blank" rel="noopener">Solicitar orçamento</a>
       </nav>
     </div>
   </header>
 
-
+  <div class="nav-backdrop" hidden></div>
 
   <main id="main" role="main">
-    <!-- HERO -->
-    <section class="hero" aria-label="Hero">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
-        <div class="hero-content fade-up">
-          <h1>Soluções em Engenharia Elétrica e Automação Industrial</h1>
+        <div class="hero-content reveal">
+          <p class="eyebrow">Engenharia elétrica &amp; automação industrial</p>
+          <h1 id="hero-title">Sua planta industrial operando com <span class="hl">segurança e eficiência</span></h1>
           <p class="lead">
-            Elaboração de projetos elétricos, Montagem de painéis, Retrofitting de máquinas, Correção de fator de potência, Indústria 4.0.
+            Projetos elétricos, montagem de painéis, retrofitting de máquinas, correção de fator de potência
+            e integração com Indústria 4.0 — do diagnóstico ao comissionamento.
           </p>
+
           <div class="hero-actions">
-            <a class="btn-primary" href="https://wa.me/5543996055993?text=Olá,%20vim%20pelo%20site%20e%20quero%20solicitar%20um%20orçamento." target="_blank" >
-              Solicitar Orçamento Agora
+            <a class="btn btn--primary"
+              href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20solicitar%20um%20orçamento."
+              target="_blank" rel="noopener">
+              Solicitar orçamento
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14" />
+                <path d="M13 6l6 6-6 6" />
+              </svg>
             </a>
-            <a class="btn-outline" href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista." target="_blank">
-              Falar com Especialista
-            </a>
+            <a class="btn btn--ghost"
+              href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20falar%20com%20um%20especialista."
+              target="_blank" rel="noopener">Falar com um especialista</a>
           </div>
+
+          <ul class="trust-row">
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" />
+                <path d="M9.2 12.2l2 2 3.6-3.8" />
+              </svg>
+              Execução conforme normas técnicas
+            </li>
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="9" cy="8" r="3" />
+                <path d="M3.5 19a5.5 5.5 0 0 1 11 0" />
+                <path d="M16 6.2a3 3 0 0 1 0 5.6M17.5 19a5.4 5.4 0 0 0-2-4.2" />
+              </svg>
+              Equipe técnica especializada
+            </li>
+            <li>
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 7v5l3.2 2" />
+              </svg>
+              Atendimento ágil na região
+            </li>
+          </ul>
         </div>
-        <div class="hero-media fade-up" role="img" aria-label="Imagem de painel elétrico / automação">
-          <img src="assets/hero.png" alt="Profissionais trabalhando em painel elétrico" />
+
+        <div class="hero-media reveal">
+          <img src="assets/hero.png" alt="Painel elétrico e linha de produção automatizada" />
         </div>
       </div>
     </section>
 
-    <!-- DIFERENCIAIS -->
-    <section class="diferenciais">
-      <div class="container diferenciais-grid">
-    
-        <div class="diferencial-item">
-          <div class="dif-icon">⚙️</div>
-          <h3>Atendimento técnico especializado</h3>
-          <p>Equipe qualificada para atender demandas industriais com segurança e eficiência.</p>
+    <!-- ============ SERVIÇOS ============ -->
+    <section id="servicos" class="section section--alt" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">O que fazemos</p>
+          <h2 id="servicos-title" class="section-title">Nossos serviços</h2>
+          <p class="section-sub">Soluções completas em elétrica industrial e automação, do projeto à manutenção.</p>
+        </header>
+
+        <div class="services-grid">
+
+          <!-- 1 — destaque -->
+          <article class="service-card service-card--featured reveal">
+            <div class="service-card__media">
+              <img src="assets/painel-eletrico.png" alt="Montagem de painéis elétricos" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="3" width="7" height="7" rx="1.5" />
+                  <rect x="3" y="14" width="7" height="7" rx="1.5" />
+                  <rect x="14" y="14" width="7" height="7" rx="1.5" />
+                </svg>
+              </span>
+              <h3>Montagem de painéis elétricos</h3>
+              <p>Montamos painéis conforme normas regulamentadoras, com testes e certificação para operação segura —
+                de comandos simples a painéis de automação completos.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20montagem%20de%20painéis%20elétricos."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 2 -->
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/service-project.png" alt="Projetos elétricos e automação industrial" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 7l9 -4l9 4l-9 4l-9 -4v10l9 4l9 -4v-10" />
+                  <path d="M3 7l9 4l9 -4" />
+                </svg>
+              </span>
+              <h3>Projetos elétricos e de automação</h3>
+              <p>Projetos, diagramas unifilares, estudos de carga e integração de automação para plantas industriais.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20projeto%20elétrico%20e%20automação."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 3 -->
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/service-retrofit.png" alt="Retrofitting de máquinas e equipamentos" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M21 12a9 9 0 1 0-3.6 7.2" />
+                  <path d="M21 3v6h-6" />
+                </svg>
+              </span>
+              <h3>Retrofitting de máquinas</h3>
+              <p>Modernização de equipamentos para aumentar produtividade e reduzir paradas, com integração de CLP e
+                IHM.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20retrofitting%20de%20máquinas."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 4 -->
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/capacitor-bank.png" alt="Banco de capacitores para correção de fator de potência"
+                loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M13 2L3 14h9l-1 8l10 -12h-9z" />
+                </svg>
+              </span>
+              <h3>Correção de fator de potência</h3>
+              <p>Análise e implementação de bancos de capacitores e soluções para otimizar o consumo energético.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20correção%20de%20fator%20de%20potência."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 5 -->
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/service-plc.png" alt="Programação de CLP e IHM" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <rect x="5" y="5" width="14" height="14" rx="2" />
+                  <rect x="9.5" y="9.5" width="5" height="5" rx="1" />
+                  <path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3" />
+                </svg>
+              </span>
+              <h3>Programação de CLP e IHM</h3>
+              <p>Desenvolvimento e comissionamento de lógicas em CLP, telas IHM e integração com sistemas SCADA.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20programação%20de%20CLP%20e%20IHM."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 6 -->
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/service-energy.png" alt="Análise e medição de energia" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M3 17l6 -6l4 4l8 -8" />
+                  <path d="M14 7h7v7" />
+                </svg>
+              </span>
+              <h3>Análise de energia</h3>
+              <p>Medições, auditorias energéticas e recomendações para reduzir consumo e custos operacionais.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20análise%20de%20energia."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- 7 -->
+          <article class="service-card reveal">
+            <div class="service-card__media">
+              <img src="assets/service-maintenance.png" alt="Manutenção corretiva e preventiva" loading="lazy" />
+            </div>
+            <div class="service-card__body">
+              <span class="service-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M14.7 6.3a4 4 0 0 0 5 5l-8.4 8.4a2.4 2.4 0 0 1-3.4-3.4l8.4-8.4a4 4 0 0 0-5-5l3 3-2.1 2.1-3-3a4 4 0 0 1 5.5 1.3z" />
+                </svg>
+              </span>
+              <h3>Manutenção corretiva e preventiva</h3>
+              <p>Planos de manutenção preventiva e atendimento corretivo com equipe técnica especializada.</p>
+              <a class="link-cta"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20um%20orçamento%20de%20manutenção%20industrial."
+                target="_blank" rel="noopener">
+                Solicitar orçamento
+                <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M5 12h14" />
+                  <path d="M13 6l6 6-6 6" />
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- card de contato -->
+          <article class="service-card service-card--cta reveal">
+            <div class="service-card__body">
+              <span class="service-card__icon service-card__icon--light" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M4 5h16v11H8l-4 4z" />
+                  <path d="M8.5 10.5h.01M12 10.5h.01M15.5 10.5h.01" />
+                </svg>
+              </span>
+              <h3>Não encontrou o que precisa?</h3>
+              <p>Cada planta tem sua particularidade. Descreva sua demanda e montamos a solução técnica adequada.</p>
+              <a class="btn btn--sm btn--light"
+                href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20conversar%20sobre%20uma%20demanda%20específica."
+                target="_blank" rel="noopener">Falar com a equipe</a>
+            </div>
+          </article>
+
         </div>
-    
-        <div class="diferencial-item">
-          <div class="dif-icon">📊</div>
-          <h3>Soluções sob medida</h3>
-          <p>Projetos personalizados conforme a necessidade de cada operação.</p>
-        </div>
-    
-        <div class="diferencial-item">
-          <div class="dif-icon">⚡</div>
-          <h3>Redução de custos operacionais</h3>
-          <p>Analise de energia com foco em otimização energética.</p>
-        </div>
-    
       </div>
     </section>
 
-    <!-- ===== Slider de Serviços ===== -->
-    <section id="servicos" class="section section-light" aria-labelledby="servicos-title">
-      <h2 id="servicos-title" class="section-title">Nossos Serviços</h2>
+    <!-- ============ PROCESSO ============ -->
+    <section id="processo" class="section" aria-labelledby="processo-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Como trabalhamos</p>
+          <h2 id="processo-title" class="section-title">Do diagnóstico ao acompanhamento</h2>
+          <p class="section-sub">Um processo claro, com responsabilidade técnica definida em cada etapa.</p>
+        </header>
 
-      <div class="service-slider" id="serviceSlider" aria-roledescription="carousel">
-        <div class="slider-track" role="list">
-
-          <!-- Slide 1 -->
-          <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="1 de 7 - Montagem de painéis elétricos">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <!-- Tabler: layout-grid -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
-                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="3" y="3" width="7" height="7" rx="1" />
-                    <rect x="14" y="3" width="7" height="7" rx="1" />
-                    <rect x="3" y="14" width="7" height="7" rx="1" />
-                    <rect x="14" y="14" width="7" height="7" rx="1" />
-                  </svg>
-                </div>
-
-                <h3>Montagem de painéis elétricos</h3>
-                <p class="service-desc">Montamos painéis conforme normas regulamentadoras, testes e certificação para
-                  operação segura.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/painel-eletrico.png" alt="Montagem de painéis elétricos — foto" />
-              </div>
-            </div>
-          </article>
-
-          <!-- Slide 2 -->
-          <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="2 de 7 - Projetos elétricos e de automação industrial">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <!-- Tabler: blueprint -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
-                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 7l9 -4l9 4l-9 4l-9 -4v10l9 4l9 -4v-10" />
-                    <path d="M3 7l9 4l9 -4" />
-                  </svg>
-                </div>
-
-                <h3>Projetos elétricos / Automação industrial</h3>
-                <p class="service-desc">Projetos, diagramas unifilares, estudos de carga e integração de automação para
-                  plantas industriais.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/service-project.png" alt="Projetos elétricos e automação — foto" />
-              </div>
-            </div>
-          </article>
-
-          <!-- Slide 3 -->
-          <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="3 de 7 - Retrofitting de máquinas e equipamentos">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <!-- Tabler: rotate-clockwise -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
-                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="12" cy="12" r="3" />
-                    <path d="M21 12a9 9 0 1 0-3.6 7.2" />
-                    <path d="M21 3v6h-6" />
-                  </svg>
-                </div>
-
-                <h3>Retrofitting de máquinas e equipamentos</h3>
-                <p class="service-desc">Modernização de máquinas para aumentar produtividade e reduzir paradas, com
-                  integração de CLP e IHM.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/service-retrofit.png" alt="Retrofitting — foto" />
-              </div>
-            </div>
-          </article>
-
-          <!-- Slide 4 -->
-          <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="4 de 7 - Correção de fator de potência">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <!-- Tabler: bolt -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
-                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M13 2L3 14h9l-1 8l10 -12h-9z" />
-                  </svg>
-                </div>
-
-                <h3>Correção de fator de potência</h3>
-                <p class="service-desc">Análise e implementação de bancos de capacitores e soluções para otimizar o
-                  consumo energético.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/capacitor-bank.png" alt="Correção de fator de potência — foto" />
-              </div>
-            </div>
-          </article>
-
-          <!-- Slide 5 -->
-          <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="5 de 7 - Programação de CLP e IHM">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <!-- Tabler: cpu -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
-                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <rect x="4" y="4" width="16" height="16" rx="2" />
-                    <path d="M9 9h6v6H9z" />
-                  </svg>
-                </div>
-
-                <h3>Programação de CLP e IHM</h3>
-                <p class="service-desc">Desenvolvimento e comissionamento de lógicas em CLP, telas IHM e integração com
-                  SCADA.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/service-plc.png" alt="Programação CLP e IHM — foto" />
-              </div>
-            </div>
-          </article>
-
-          <!-- Slide 6 -->
-          <article class="slide" role="group" aria-roledescription="slide" aria-label="6 de 7 - Análise de energia">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <!-- Tabler: chart-line -->
-                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" stroke="#0077C8"
-                    stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M3 17l6 -6l4 4l8 -8" />
-                    <path d="M14 7h7v7" />
-                  </svg>
-                </div>
-
-                <h3>Análise de energia</h3>
-                <p class="service-desc">Medições, auditorias energéticas e recomendações para reduzir consumo e custos
-                  operacionais.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/service-energy.png" alt="Análise de energia — foto" />
-              </div>
-            </div>
-          </article>
-
-          <!-- Slide 7 -->
-          <article class="slide" role="group" aria-roledescription="slide"
-            aria-label="7 de 7 - Manutenções corretivas e preventivas">
-            <div class="slide-inner">
-              <div class="slide-left">
-                <div class="service-icon">
-                  <img src="assets/service-maintenance-icon.png" alt="ícone ferramentas" width="48" height="48" />
-                </div>
-
-                <h3>Manutenções corretivas e preventivas</h3>
-                <p class="service-desc">Planos de manutenção preventiva e atendimento corretivo com equipe técnica
-                  especializada.</p>
-              </div>
-
-              <div class="slide-right">
-                <img src="assets/service-maintenance.png" alt="Manutenção corretiva e preventiva — foto" />
-              </div>
-            </div>
-          </article>
-
-
-        </div>
-
-        <!-- indicators -->
-        <div class="slider-dots" role="tablist" aria-label="Navegação dos slides">
-          <button class="dot" data-index="0" aria-label="Ir para slide 1" role="tab"></button>
-          <button class="dot" data-index="1" aria-label="Ir para slide 2" role="tab"></button>
-          <button class="dot" data-index="2" aria-label="Ir para slide 3" role="tab"></button>
-          <button class="dot" data-index="3" aria-label="Ir para slide 4" role="tab"></button>
-          <button class="dot" data-index="4" aria-label="Ir para slide 5" role="tab"></button>
-          <button class="dot" data-index="5" aria-label="Ir para slide 6" role="tab"></button>
-          <button class="dot" data-index="6" aria-label="Ir para slide 7" role="tab"></button>
-        </div>
-
-        <!-- progress bar (visual) -->
-        <div class="slider-progress" aria-hidden="true">
-          <div class="slider-progress__bar"></div>
-        </div>
-
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Diagnóstico</h3>
+            <p>Visita técnica, levantamento de campo e entendimento da necessidade real da operação.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">02</span>
+            <h3>Projeto e escopo</h3>
+            <p>Documentação técnica, dimensionamento e proposta com escopo, prazo e investimento definidos.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">03</span>
+            <h3>Execução</h3>
+            <p>Montagem, instalação, programação e comissionamento com testes antes da liberação.</p>
+          </li>
+          <li class="step reveal">
+            <span class="step__num">04</span>
+            <h3>Acompanhamento</h3>
+            <p>Entrega da documentação, orientação da equipe e suporte contínuo pós-instalação.</p>
+          </li>
+        </ol>
       </div>
     </section>
 
+    <!-- ============ DIFERENCIAIS ============ -->
+    <section id="diferenciais" class="section section--alt" aria-labelledby="diferenciais-title">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="eyebrow">Por que a Retrotech</p>
+          <h2 id="diferenciais-title" class="section-title">Engenharia com foco no chão de fábrica</h2>
+        </header>
 
+        <div class="feature-grid">
+          <article class="feature reveal">
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="3.2" />
+                <path
+                  d="M12 2.5l1.6 2.1 2.6-.5.6 2.6 2.4 1.1-1.2 2.4 1.2 2.4-2.4 1.1-.6 2.6-2.6-.5L12 18.4l-1.6-2.1-2.6.5-.6-2.6-2.4-1.1 1.2-2.4-1.2-2.4 2.4-1.1.6-2.6 2.6.5z" />
+              </svg>
+            </span>
+            <h3>Atendimento técnico especializado</h3>
+            <p>Equipe qualificada para atender demandas industriais com segurança, método e rastreabilidade.</p>
+          </article>
+
+          <article class="feature reveal">
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19V5" />
+                <path d="M4 19h16" />
+                <rect x="7.5" y="11" width="3" height="5" rx="1" />
+                <rect x="13" y="7.5" width="3" height="8.5" rx="1" />
+              </svg>
+            </span>
+            <h3>Soluções sob medida</h3>
+            <p>Projetos personalizados conforme a necessidade de cada operação, sem pacote genérico.</p>
+          </article>
+
+          <article class="feature reveal">
+            <span class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M13 2L3 14h9l-1 8l10 -12h-9z" />
+              </svg>
+            </span>
+            <h3>Redução de custos operacionais</h3>
+            <p>Análise de energia com foco em otimização energética e diminuição de paradas não programadas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="cta-band" aria-labelledby="cta-title">
+      <div class="container cta-inner reveal">
+        <div class="cta-text">
+          <h2 id="cta-title">Vamos avaliar sua demanda?</h2>
+          <p>Envie os detalhes pelo WhatsApp e retornamos com o encaminhamento técnico e o orçamento.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn--light"
+            href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site%20e%20quero%20solicitar%20um%20orçamento."
+            target="_blank" rel="noopener">
+            Solicitar orçamento
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14" />
+              <path d="M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn btn--outline-light" href="https://instagram.com/retrotech.industrial" target="_blank"
+            rel="noopener">Ver o Instagram</a>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- FOOTER  -->
+  <!-- ============ FOOTER ============ -->
   <footer id="contato" class="site-footer" role="contentinfo">
     <div class="container footer-grid">
 
-      <!-- LOGO + TEXTO -->
-      <div class="footer-left">
-        <img src="assets/logo-retrotech-footer.png" alt="Logo Retrotech" class="footer-logo" />
-
-        <div class="footer-text">
-          Retrotech Automação Industrial
-        </div>
+      <div class="footer-brand">
+        <span class="footer-logo">
+          <img src="assets/logo-retrotech-footer.png" alt="Retrotech Automação Industrial" />
+        </span>
+        <p class="footer-desc">
+          Engenharia elétrica e automação industrial para indústrias de Londrina e região.
+        </p>
+        <p class="footer-cnpj">CNPJ: 28.126.057/0001-50</p>
       </div>
 
-      <p class="footer-info">CNPJ: 28.126.057/0001-50</p>
-      <!-- <p class="footer-info">Londrina - PR e região.</p> -->
+      <nav class="footer-col" aria-label="Navegação do rodapé">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#servicos">Serviços</a></li>
+          <li><a href="#processo">Como trabalhamos</a></li>
+          <li><a href="#diferenciais">Por que a Retrotech</a></li>
+          <li><a href="#main">Início</a></li>
+        </ul>
+      </nav>
 
-      <!-- BOTÕES -->
-      <div class="footer-actions">
-        <a class="footer-btn" href="https://wa.me/5543996055993" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M20.52 3.48A11.8 11.8 0 0012.02 0C5.38 0 .02 5.36.02 12c0 2.12.55 4.2 1.6 6.05L0 24l6.17-1.6A11.9 11.9 0 0012.02 24c6.64 0 12-5.36 12-12 0-3.2-1.25-6.21-3.5-8.52zM12.02 22c-1.85 0-3.66-.5-5.24-1.44l-.37-.22-3.66.95.98-3.56-.24-.37A9.94 9.94 0 012.02 12c0-5.51 4.49-10 10-10 2.67 0 5.17 1.04 7.07 2.93A9.94 9.94 0 0122.02 12c0 5.51-4.49 10-10 10zm5.5-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.66.15-.2.3-.76.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.27-.47-2.42-1.5-.9-.8-1.5-1.8-1.68-2.1-.17-.3-.02-.46.13-.6.14-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.66-1.6-.9-2.2-.24-.57-.48-.5-.66-.5h-.56c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5 0 1.47 1.08 2.9 1.23 3.1.15.2 2.13 3.25 5.17 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35z"/>
-          </svg>
-        </a>
-
-        <a class="footer-btn" href="https://instagram.com/retrotech.industrial" target="_blank">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 5a5 5 0 100 10 5 5 0 000-10zm0 2a3 3 0 110 6 3 3 0 010-6zm5.5-.75a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0z"/>
-          </svg>
-        </a>
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <ul>
+          <li>
+            <a href="https://wa.me/5543999852335" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5 4h3l2 5-2.2 1.3a12 12 0 0 0 5.9 5.9L15 14l5 2v3a2 2 0 0 1-2.2 2A16 16 0 0 1 3 6.2 2 2 0 0 1 5 4z" />
+              </svg>
+              (43) 99985-2335
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com/retrotech.industrial" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17" cy="7" r="1" />
+              </svg>
+              @retrotech.industrial
+            </a>
+          </li>
+          <li>
+            <span class="footer-plain">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s-7-5.6-7-11a7 7 0 1 1 14 0c0 5.4-7 11-7 11z" />
+                <circle cx="12" cy="10" r="2.6" />
+              </svg>
+              Londrina — PR e região
+            </span>
+          </li>
+        </ul>
       </div>
 
     </div>
-    <a href="https://wa.me/5543996055993?text=Olá,%20vim%20pelo%20site." class="whatsapp-float" target="_blank">
-      <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff">
-        <path
-          d="M16 .396C7.163.396 0 7.559 0 16.396c0 2.89.754 5.604 2.063 7.957L0 32l7.85-2.06A15.94 15.94 0 0 0 16 32c8.837 0 16-7.163 16-16.004C32 7.56 24.837.396 16 .396zm0 29.1c-2.566 0-5.073-.693-7.25-2.004l-.52-.31-4.66 1.223 1.244-4.546-.338-.554a13.87 13.87 0 0 1-2.122-7.41C2.354 8.77 8.77 2.354 16 2.354c7.23 0 13.646 6.416 13.646 13.646 0 7.23-6.416 13.646-13.646 13.646zm7.51-10.21c-.41-.205-2.427-1.197-2.804-1.333-.378-.137-.653-.205-.929.205-.274.41-1.066 1.333-1.307 1.607-.24.274-.48.308-.89.103-.41-.205-1.732-.639-3.3-2.04-1.22-1.087-2.045-2.43-2.285-2.84-.24-.41-.025-.63.18-.835.184-.183.41-.48.616-.719.205-.24.274-.41.41-.684.137-.274.068-.513-.034-.718-.103-.205-.929-2.24-1.272-3.068-.334-.804-.673-.695-.929-.708-.24-.012-.513-.015-.787-.015-.274 0-.718.103-1.093.513-.378.41-1.44 1.406-1.44 3.43 0 2.024 1.475 3.978 1.68 4.252.205.274 2.9 4.43 7.03 6.21.982.424 1.748.677 2.345.867.986.313 1.884.269 2.594.163.792-.118 2.427-.992 2.77-1.95.343-.958.343-1.78.24-1.95-.102-.17-.377-.274-.787-.479z" />
-      </svg>
-    </a>
 
     <div class="container footer-bottom">
-      © <span id="year"></span> Retrotech. Todos os direitos reservados.
+      © <span id="year"></span> Retrotech Automação Industrial. Todos os direitos reservados.
     </div>
   </footer>
+
+  <a href="https://wa.me/5543999852335?text=Olá,%20vim%20pelo%20site." class="whatsapp-float" target="_blank"
+    rel="noopener" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="#fff" aria-hidden="true">
+      <path
+        d="M16 .396C7.163.396 0 7.559 0 16.396c0 2.89.754 5.604 2.063 7.957L0 32l7.85-2.06A15.94 15.94 0 0 0 16 32c8.837 0 16-7.163 16-16.004C32 7.56 24.837.396 16 .396zm0 29.1c-2.566 0-5.073-.693-7.25-2.004l-.52-.31-4.66 1.223 1.244-4.546-.338-.554a13.87 13.87 0 0 1-2.122-7.41C2.354 8.77 8.77 2.354 16 2.354c7.23 0 13.646 6.416 13.646 13.646 0 7.23-6.416 13.646-13.646 13.646zm7.51-10.21c-.41-.205-2.427-1.197-2.804-1.333-.378-.137-.653-.205-.929.205-.274.41-1.066 1.333-1.307 1.607-.24.274-.48.308-.89.103-.41-.205-1.732-.639-3.3-2.04-1.22-1.087-2.045-2.43-2.285-2.84-.24-.41-.025-.63.18-.835.184-.183.41-.48.616-.719.205-.24.274-.41.41-.684.137-.274.068-.513-.034-.718-.103-.205-.929-2.24-1.272-3.068-.334-.804-.673-.695-.929-.708-.24-.012-.513-.015-.787-.015-.274 0-.718.103-1.093.513-.378.41-1.44 1.406-1.44 3.43 0 2.024 1.475 3.978 1.68 4.252.205.274 2.9 4.43 7.03 6.21.982.424 1.748.677 2.345.867.986.313 1.884.269 2.594.163.792-.118 2.427-.992 2.77-1.95.343-.958.343-1.78.24-1.95-.102-.17-.377-.274-.787-.479z" />
+    </svg>
+  </a>
 
   <script src="main.js"></script>
 </body>
